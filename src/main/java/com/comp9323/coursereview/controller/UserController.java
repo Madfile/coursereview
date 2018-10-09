@@ -1,6 +1,6 @@
 package com.comp9323.coursereview.controller;
 
-import VO.ResultVO;
+import com.comp9323.coursereview.VO.ResultVO;
 import com.comp9323.coursereview.converter.UserForm2UserDetailConverter;
 import com.comp9323.coursereview.dataObject.UserDetail;
 import com.comp9323.coursereview.enums.ResultEnum;
@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import util.ResultVOUtil;
+import com.comp9323.coursereview.util.ResultVOUtil;
 
 import javax.validation.Valid;
 

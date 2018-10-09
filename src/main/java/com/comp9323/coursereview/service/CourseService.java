@@ -14,9 +14,11 @@ public interface CourseService {
     Course add(CourseForm courseForm);
 
     List<CourseDTO> list();
-
-    //actually should be course dto
-    CourseDTO  search(String courseCode);
-
+    CourseDTO  getOne(String courseCode);
     List<CourseDTO> compare(String courseCode1,String courseCode2);
+    List<CourseDTO> rankByOverallRanking();
+    List<CourseDTO> rankByDifficultyRanking();
+    List<CourseDTO> rankByPassRate();
+    List<CourseDTO> rankByPopularity();
+    List<CourseDTO> match(String keyword);
 }

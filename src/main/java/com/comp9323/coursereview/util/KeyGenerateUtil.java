@@ -1,4 +1,4 @@
-package util;
+package com.comp9323.coursereview.util;
 
 import java.util.Random;
 

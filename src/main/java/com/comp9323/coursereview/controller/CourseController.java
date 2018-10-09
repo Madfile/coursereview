@@ -1,24 +1,17 @@
 package com.comp9323.coursereview.controller;
 
-import VO.ResultVO;
-import com.comp9323.coursereview.converter.UserForm2UserDetailConverter;
-import com.comp9323.coursereview.dataObject.Course;
-import com.comp9323.coursereview.dataObject.UserDetail;
+import com.comp9323.coursereview.VO.ResultVO;
 import com.comp9323.coursereview.enums.ResultEnum;
 import com.comp9323.coursereview.exception.HolirooException;
 import com.comp9323.coursereview.form.CourseForm;
-import com.comp9323.coursereview.form.UserDetailForm;
-import com.comp9323.coursereview.form.UserUpdateForm;
 import com.comp9323.coursereview.service.CourseService;
-import com.comp9323.coursereview.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import util.ResultVOUtil;
+import com.comp9323.coursereview.util.ResultVOUtil;
 
 import javax.validation.Valid;
-import javax.xml.transform.Result;
 
 @RestController
 @RequestMapping("/course")
@@ -51,7 +44,7 @@ public class CourseController {
     @PostMapping("/getOne")
     public ResultVO search(@RequestParam("courseCode") String courseCode){
 
-        return ResultVOUtil.success(courseService.search(courseCode));
+        return ResultVOUtil.success(courseService.getOne(courseCode));
     }
 
     @PostMapping("/compare")
@@ -61,6 +54,33 @@ public class CourseController {
         return ResultVOUtil.success(courseService.compare(courseCode1,courseCode2));
     }
 
+    @GetMapping("/rankByOverallRanking")
+    public ResultVO rankByOverallRanking(){
+        return ResultVOUtil.success(courseService.rankByOverallRanking());
+    }
+
+    @GetMapping("/rankByDifficultyRanking")
+    public ResultVO rankByDifficultyRanking(){
+        return ResultVOUtil.success(courseService.rankByDifficultyRanking());
+    }
+
+    @GetMapping("/rankByPassRate")
+    public ResultVO rankByPassRate(){
+        return ResultVOUtil.success(courseService.rankByPassRate());
+    }
+
+    @GetMapping("/rankByPopularity")
+    public ResultVO rankByPopularity(){
+        return ResultVOUtil.success(courseService.rankByPopularity());
+    }
+
     //TODO: search
+    @PostMapping("/search")
+    public ResultVO compare(@RequestParam("keyword") String keyword){
+
+        return ResultVOUtil.success(courseService.match(keyword));
+    }
+
+
 
 }

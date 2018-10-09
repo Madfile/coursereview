@@ -4,7 +4,7 @@ package com.comp9323.coursereview.converter;
 import com.comp9323.coursereview.dataObject.UserDetail;
 import com.comp9323.coursereview.form.UserDetailForm;
 import com.comp9323.coursereview.form.UserUpdateForm;
-import util.KeyGenerateUtil;
+import com.comp9323.coursereview.util.KeyGenerateUtil;
 
 public class UserForm2UserDetailConverter {
     public static UserDetail convert(UserDetailForm userDetailForm){

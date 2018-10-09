@@ -1,6 +1,6 @@
 package com.comp9323.coursereview.controller;
 
-import VO.ResultVO;
+import com.comp9323.coursereview.VO.ResultVO;
 import com.comp9323.coursereview.enums.ResultEnum;
 import com.comp9323.coursereview.exception.HolirooException;
 import com.comp9323.coursereview.form.RemarkForm;
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import util.ResultVOUtil;
+import com.comp9323.coursereview.util.ResultVOUtil;
 
 import javax.validation.Valid;
 
@@ -33,9 +33,9 @@ public class RemarkController {
     }
 
     @PostMapping("/delete")
-    public ResultVO delete(@RequestParam("remarkId") String remarkId){
+    public ResultVO delete(@RequestParam("remarkId") String remarkId, String userId){
 
-        return ResultVOUtil.success(remarkService.delete(remarkId));
+        return ResultVOUtil.success(remarkService.delete(remarkId, userId));
     }
 //
 //    @PostMapping("/update")
@@ -50,12 +50,10 @@ public class RemarkController {
 //
 //
     @PostMapping("/list")
-    public ResultVO list(@RequestParam("courseCode") String courseCode) {
+    public ResultVO list(@RequestParam("courseCode") String courseCode,
+                         @RequestParam("userId") String userId) {
 
-        //Sort sort = new Sort(Sort.Direction.ASC, "updateTime");
-        //Pageable pageable = new PageRequest(page, size, sort);
-
-        return ResultVOUtil.success(remarkService.list(courseCode));
+        return ResultVOUtil.success(remarkService.list(courseCode, userId));
     }
 //
 //    @RequestMapping("/getOne")

@@ -1,7 +1,7 @@
-package util;
+package com.comp9323.coursereview.util;
 
 
-import VO.ResultVO;
+import com.comp9323.coursereview.VO.ResultVO;
 
 public class ResultVOUtil {
     public static ResultVO success(Object object){

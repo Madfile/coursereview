@@ -13,7 +13,7 @@ public class RemarkForm2RemarkConverter {
         remark.setRemarkDifficultyMark(Integer.valueOf(remarkForm.getRemarkDifficultyMark()));
         remark.setRemarkOverallMark(Integer.valueOf(remarkForm.getRemarkOverallMark()));
         remark.setRemarkUserId(remarkForm.getRemarkUserId());
-        remark.setRemarkUserName(remarkForm.getRemarkUserName());
+        remark.setRemarkUserName(remarkForm.getRemarkUsername());
 
         return remark;
     }

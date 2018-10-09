@@ -1,4 +1,4 @@
-package VO;
+package com.comp9323.coursereview.VO;
 
 import lombok.Data;
 

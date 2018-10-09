@@ -1,6 +1,6 @@
 package com.comp9323.coursereview.exception;
 
-import VO.ResultVO;
+import com.comp9323.coursereview.VO.ResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

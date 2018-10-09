@@ -14,7 +14,7 @@ public class Course2CourseDTOConverter {
         courseDTO.setCourseId(course.getCourseId());
         courseDTO.setCourseLevel(course.getCourseLevel());
         courseDTO.setCourseName(course.getCourseName());
-        courseDTO.setCoursePassRate(course.getCoursePassRate());
+        courseDTO.setCoursePassRate(course.getCoursePassRate().replace("%", ""));
         return courseDTO;
     }
 }
