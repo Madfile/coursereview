@@ -21,4 +21,5 @@ public interface CourseService {
     List<CourseDTO> rankByPassRate();
     List<CourseDTO> rankByPopularity();
     List<CourseDTO> match(String keyword);
+    List<CourseDTO> findByLevel(String level);
 }

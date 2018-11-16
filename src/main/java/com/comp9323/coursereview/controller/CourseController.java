@@ -81,6 +81,11 @@ public class CourseController {
         return ResultVOUtil.success(courseService.match(keyword));
     }
 
+    @PostMapping("/level")
+    public ResultVO level(@RequestParam("level") String level){
+        return ResultVOUtil.success(courseService.findByLevel(level));
+    }
+
 
 
 }

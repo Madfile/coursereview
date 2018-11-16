@@ -12,6 +12,7 @@ public interface CourseRepository extends JpaRepository<Course, String> {
     Optional<Course> findByCourseCode(String courseCode);
     List<Course> findByCourseCodeContaining(String CapitalKeyword);
     List<Course> findByCourseNameContaining(String CapitalKeyword);
+    List<Course> findByCourseLevel(String level);
 
 
 }

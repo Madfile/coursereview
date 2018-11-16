@@ -14,7 +14,7 @@ public class CoursereviewApplication extends SpringBootServletInitializer {
         return builder.sources(CoursereviewApplication.class);
     }
 
-//    public static void main(String[] args) {
-//        SpringApplication.run(CoursereviewApplication.class, args);
-//    }
+    public static void main(String[] args) {
+        SpringApplication.run(CoursereviewApplication.class, args);
+    }
 }

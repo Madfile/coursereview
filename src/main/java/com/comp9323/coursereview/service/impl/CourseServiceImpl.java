@@ -165,4 +165,17 @@ public class CourseServiceImpl implements CourseService {
 //        }
 
     }
+
+    @Override
+    public List<CourseDTO> findByLevel(String level) {
+        List<Course> courseList = courseRepository.findByCourseLevel(level);
+        List<CourseDTO> courseDTOList = new ArrayList<CourseDTO>();
+        for (Course course : courseList) {
+            String courseCode = course.getCourseCode();
+            CourseDTO courseDTO = getOne(courseCode);
+            courseDTOList.add(courseDTO);
+        }
+
+        return courseDTOList;
+    }
 }
