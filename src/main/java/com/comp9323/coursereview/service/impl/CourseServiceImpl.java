@@ -141,7 +141,7 @@ public class CourseServiceImpl implements CourseService {
 
         for (Course course : courseList) {
             if (course.getCourseCode().toLowerCase().contains(keyword.toLowerCase()) || course.getCourseName().toLowerCase().contains(keyword.toLowerCase())) {
-                CourseDTO courseDTO = Course2CourseDTOConverter.convert(course);
+                CourseDTO courseDTO = getOne(course.getCourseCode());
                 if (!courseDTOList.contains(courseDTO)) {
                     courseDTOList.add(courseDTO);
                 }
