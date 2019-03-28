@@ -1,0 +1,83 @@
+! version = 2.0
++ (hello|hi|hey|howdy|hola|hai|yo) [*]
+- How do you do. Please state your problem.
+- Hi. What seems to be your problem?
+- Hey,how can I help you?
++ thank you
+- You're welcome
++ bye
+- see you
++ [*] (yes|yeah|yep|yup) [*]
+- Please go on.
+- Please tell me more about this.
+- Why don't you tell me a little more about this.
+- I see.
+- I understand.
+
++ *
+- I'm not sure I understand you fully.
+- Please go on.
+- That is interesting. Please continue.
+- Tell me more about that.
+
+
++ [*] (nope|nah) [*]
+- Are you saying no just to be negative?
+- Does this make you feel unhappy?
+- Why not?
+- Why 'no'?
+
++ no
+@ nope
++ can you *
+- You believe I can <star> don't you?
+- You want me to be able to <star>.
+- Perhaps you would like to be able to <star> yourself.
+
++ my name is _
+- It's nice to meet you, <star>.
+- <star>, nice to meet you.
+- Pleased to meet you, <star>.
+
++ [what are] level* courses
+
+* <set age=<star>><get age> ==  0 => \nBINF9010\nCOMP6441\nCOMP9020\nCOMP9021\nCOMP9032\nCOMP9311\nCOMP9414\nCOMP9814\nCOMP9511
+* <set age=<star>><get age> == 1 => \nCOMP4418\nCOMP6324\nCOMP9024\nCOMP9041\nCOMP9101\nCOMP9801\nCOMP9222\COMP9321\nCOMP9322
+* <set age=<star>><get age> ==  2 => \nBINF9020\nCOMP4141\nCOMP4161\nCOMP6714\nCOMP6733\nCOMP6752\nCOMP6771\nCOMP6841\nCOMP9102
+* <set age=<star>><get age> == 3 => \nCOMP4121\nCOMP6443\nCOMP6445\nCOMP6447\nCOMP6448\nCOMP6741\nCOMP6843\nCOMP6845\nCOMP9242
+
+- We just have 4 levels courses.
+
++  [*](how is|how about|what is the description of) *[*]
+-  Here is the handbook of <star2> : <a href="http://legacy.handbook.unsw.edu.au/postgraduate/courses/2018/{uppercase}<star2>{/uppercase}.html"><star2></a>
+
++ [what are] top10 courses
+- \nCOMP9323\nCOMP9021\nCOMP9444\nCOMP9318\nCOMP6714\nCOMP9322\nCOMP9900\nCOMP9311\nCOMP9417\nCOMP9024{weight=20}
+- \nCOMP9415\nCOMP9517\nCOMP9020\nCOMP9318\nCOMP6714\nCOMP9021\nCOMP9444\nCOMP9311\nCOMP9417\nCOMP9024{weight=20}
+- \nCOMP9596\nCOMP9517\nCOMP9335\nCOMP9313\nCOMP9337\nCOMP9315\nCOMP9444\nCOMP9311\nCOMP9319\nCOMP4121{weight=20}
+
++ [what are] top10 difficult courses
+- \nCOMP9323\nCOMP9021\nCOMP9444\nCOMP9318\nCOMP6714\nCOMP9322\nCOMP9900\nCOMP9311\nCOMP9417\nCOMP9024{weight=20}
+- \nCOMP9415\nCOMP9517\nCOMP9020\nCOMP9318\nCOMP6714\nCOMP9021\nCOMP9444\nCOMP9311\nCOMP9417\nCOMP9024{weight=20}
+- \nCOMP9596\nCOMP9517\nCOMP9335\nCOMP9313\nCOMP9337\nCOMP9315\nCOMP9444\nCOMP9311\nCOMP9319\nCOMP4121{weight=20}
+
++ what weather in *
+- city=<star>,question=weathercondition
+
+
++ what are top * courses
+- num=<star>,question=top
+
++ what are top *  difficult courses
+- n=<star>,question=difficult
+
++ add comments
+- which course
++ *
+% which course
+- <set course=<star>>how is this course you think
++ *
+% how is this course you think
+- course=<get course> and comments=<star>,quetion=addcomments
+
+

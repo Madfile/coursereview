@@ -23,7 +23,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
         return resultVO;
     }
-    
+
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ResultVO generalErrorHandler(HttpServletRequest request, HolirooException e) throws Exception {

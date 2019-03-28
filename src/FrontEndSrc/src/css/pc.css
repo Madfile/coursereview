@@ -1,0 +1,80 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+.logo{
+    align-items: center;
+}
+
+.logo img{
+    width: 48px;
+    height: 48px;
+}
+
+.logo span{
+    font-size: 24px;
+    padding-bottom: 35px;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    background: #364d79;
+    overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+
+.headerbg{
+    padding: 10px 0px;
+}
+
+.search{
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+
+.search  input{
+    width: 300px;
+    height: 40px;
+}
+.search button{
+    width: 100px;
+}
+
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    margin:0;
+}
+
+.popular{
+    padding:30px 0px 15px 0px;
+    text-align: center;
+}
+
+.popular2{
+    padding: 15px 0 80px 0;
+    text-align: center;
+}
+
+/* For demo */
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.courses {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bottomFooter{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
